@@ -24,7 +24,7 @@ const SearchDisplay = ({result}) => {
   return (
     <div className={"restaurantCard"} key={id} value={id}>
       <div className={"basicInfo"}>
-          <h2 id={"name"} onClick={() => handleClick(id)} value={id}>{name}</h2>
+          <h2 id={"name"} onClick={(e) => handleClick(e.target.value)} value={id}>{name}</h2>
           <img src={image_url} alt={"Restaurant"} id={"image"}/>
           <h2 id={"address"}>Address: 
             {display_address[0]},
