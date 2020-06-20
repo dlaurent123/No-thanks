@@ -5,7 +5,7 @@ export const searchSlice = createSlice({
     name: "search",
     initialState:[],
     reducers: {
-        recieveSearch: (state, action)=>{
+        receiveSearch: (state, action)=>{
             return action.payload
         }
     }
@@ -14,5 +14,5 @@ export const searchSlice = createSlice({
 
 
 
-export const {recieveSearch} = searchSlice.actions
+export const {receiveSearch} = searchSlice.actions
 export default searchSlice.reducer

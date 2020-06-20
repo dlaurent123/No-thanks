@@ -4,9 +4,9 @@ export const locationSlice = (createSlice({
     name: "location",
     initalState:"",
     reducers: {
-        recieveLocation: (state, action)=> action.payload
+        receiveLocation: (state, action)=> action.payload
     }
 }))
 
-export const {recieveLocation} = locationSlice.actions
+export const {receiveLocation} = locationSlice.actions
 export default locationSlice.reducer
