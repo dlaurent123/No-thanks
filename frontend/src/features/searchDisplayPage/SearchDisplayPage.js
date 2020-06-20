@@ -4,6 +4,12 @@ import { useSelector } from 'react-redux'
 
 const SearchDisplayPage = () => {
   const searchResults = useSelector(state => state.search)
+
+
+  //stretch feature idea 1:
+  // filter buttons by price
+  // make it a select box/check box, on selected filter through searchResults if the price is equal to "$", "$$" etc
+  
   const results = searchResults.map(result => {
     return <SearchDisplay result={result}/>
   })

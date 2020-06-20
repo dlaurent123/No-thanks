@@ -20,6 +20,7 @@ const SearchDisplay = ({result}) => {
     //On click, fires the modal for that individual store
   }
 
+
   return (
     <div className={"restaurantCard"} key={id} value={id}>
       <div className={"basicInfo"}>
