@@ -12,7 +12,7 @@ const SearchDisplayPage = () => {
   // make it a select box/check box, on selected filter through searchResults if the price is equal to "$", "$$" etc
   
   const results = searchResults.map(result => {
-    if (result.rating <= 3) {
+    if (result.rating <= 2.9) {
       return <SearchDisplay result={result}/>
     } 
   })
