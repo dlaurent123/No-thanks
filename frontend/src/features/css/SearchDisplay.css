@@ -1,4 +1,6 @@
 .restaurantCard {
+    display: flex;
+    flex-direction: row;
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
@@ -6,19 +8,12 @@
     background-color: lightgray;
 }
 
- /* .basicInfo {
+.information {
+    display: flex;
+    flex-direction: column;
+}
 
-} */
-
-/* .information {
-
-} */
-/* 
-#info {
-
-} */
-
-.image {
+#image {
     height: 200px;
     width: 200px;
     border-radius: 10px;

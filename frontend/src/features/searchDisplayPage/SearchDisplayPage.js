@@ -3,7 +3,6 @@ import SearchDisplay from "../searchDisplay/SearchDisplay";
 import { useSelector } from 'react-redux'
 
 const SearchDisplayPage = () => {
-  const [ positiveResults, setPositiveResults ] = useState([])
   const searchResults = useSelector(state => state.search)
 
 
