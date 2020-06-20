@@ -11,11 +11,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-<<<<<<< HEAD
-        <Route exact path="/search">
-=======
         <Route exact path="/searchresults">
->>>>>>> 6a7833bfe8facf7ce5a6aae458b1b90eb4ae9427
           <SearchDisplayPage />
         </Route>
       </Switch>

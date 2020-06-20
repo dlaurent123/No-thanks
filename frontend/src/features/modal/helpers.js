@@ -5,7 +5,6 @@ export const styles = {
     right: "auto",
     bottom: "auto",
     border: "unset",
-    padding: "unset",
     transform: "translate(-50%, -50%)",
     backgroundColor: "white",
     minHeight: "400px",
