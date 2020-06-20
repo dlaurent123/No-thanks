@@ -6,42 +6,44 @@
     background-color: lightgray;
 }
 
-/* .basicInfo {
+ /* .basicInfo {
 
-}
+} */
 
-.information {
+/* .information {
 
-}
-
+} */
+/* 
 #info {
 
-}
+} */
 
-#image {
-
+.image {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
 }
 
 #address {
-
+ font-weight: 400;
 }
 
 #phone {
-
+ font-weight: 400;
 }
 
 #category {
-
+ font-weight: 400;
 }
 
 #reviews {
-
+ font-weight: 400;
 }
-
+/* 
 #rating {
 
-}
+} */
 
 #price {
-
-} */
+ font-weight: 400;
+} 

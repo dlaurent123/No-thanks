@@ -25,12 +25,12 @@ const SearchDisplay = ({result}) => {
     <div className={"restaurantCard"} key={id} value={id}>
       <div className={"basicInfo"}>
           <h2 id={"name"} onClick={(e) => handleClick(e.target.value)} value={id}>{name}</h2>
-          <img src={image_url} alt={"Restaurant"} id={"image"}/>
-          <h2 id={"address"}>Address: 
+          <img src={image_url} alt={"Restaurant"} className={"image"}/>
+          <h2 id={"address"}>
             {display_address[0]},
             {display_address[1]}
           </h2>
-          <h2 id={"phone"}>Contact: {display_phone}</h2>
+          <h2 id={"phone"}>{display_phone}</h2>
       </div>
       <div className={"information"}>
           <h2 id={"category"}>Category: {categories[0].title}</h2>
