@@ -11,6 +11,7 @@ const [term, setTerm] = useState("")
 const[latitude, setLatitude] = useState("")
 const[longitude, setLongitude] = useState("")
 const dispatch = useDispatch()
+const history = useHistory()
 console.log(location)
 
 const locationURL = ()=>{
@@ -56,6 +57,7 @@ const handleSubmit = async (e) =>{
    
     )
     dispatch(receiveSearch(res.data.businesses))
+    history.push("/searchResults")
     debugger
   }catch(err){
     console.log(err)
