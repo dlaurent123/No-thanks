@@ -1,0 +1,55 @@
+
+.main-list{
+    margin: 0;
+    padding: 0;
+    /* margin-right: 200px; */
+    float: right;
+  }
+
+   .main-list li {
+    /* display: inline; */
+    padding-right: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .main-list__link:link {
+    font-size: 1rem;
+    line-height: 0.9rem;
+    color: white;
+    text-decoration: none;
+    padding: 12px 11px 9px 11px;
+  }
+
+   .main-list__link:hover {
+    border-bottom: 2px solid white
+  }
+  .about-us{
+    margin-top: 15px;
+    margin-left: 100px;
+  }
+  .about-app{
+    
+    margin-right: 255px;
+    color: skyblue;
+    margin-top: 10px;
+    
+  }
+
+  .connect{
+    color:skyblue;
+    margin-top: 10px;
+  
+    
+}
+  
+  .class{
+    margin-right: 500px;
+  }
+
+
+  .about{
+    float: left;
+    margin-left: 400px;
+  }
+ 

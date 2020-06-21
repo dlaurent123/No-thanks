@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { receiveSearch } from "../search/searchSlice";
 import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
+import "../css/Search.css"
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Search = () => {
@@ -47,7 +48,7 @@ const Search = () => {
     try {
       let res = await axios.get(url, {
         headers: {
-          Authorization: `Bearer 2kOBLSGkI2-Zl6Q2gRelZXbxvMzGPl8hF7wIDiLaXwJMbzZ06CcB94OBm9wqGUYXaNgtOZARg0j1G1BcehNnwuXm0c0YJ6kigY3i1O20lwP5MJ3v1IrFrjCQ4nzvXnYx`,
+          Authorization: `Bearer ${API_KEY}`,
         },
       });
       dispatch(receiveSearch(res.data.businesses));

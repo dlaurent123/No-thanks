@@ -7,7 +7,6 @@ import SearchDisplayPage from "./features/searchDisplayPage/SearchDisplayPage";
 function App() {
   return (
     <>
-      
       <div className="App">
         <Switch>
           <Route exact path="/">
