@@ -5,13 +5,20 @@ import BusinessDisplay from "../bussinesDisplay/BussinesDisplay";
 import { useSelector } from "react-redux";
 import { modalState } from "./modalSlice";
 
-const ModalDispaly = () => {
+const ModalDisplay = () => {
   const isOpen = useSelector(modalState);
+
   return (
-    <Modal style={styles} isOpen={isOpen}>
+    <Modal
+      contentLabel="Example Modal"
+      ariaHideApp={false}
+      ariaModal={true}
+      style={styles}
+      isOpen={isOpen}
+    >
       <BusinessDisplay />
     </Modal>
   );
 };
 
-export default ModalDispaly;
+export default ModalDisplay;

@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import SearchDisplay from "../searchDisplay/SearchDisplay";
-import ModalDispaly from "../modal/ModalDisplay";
+import ModalDisplay from "../modal/ModalDisplay";
 import { useSelector } from "react-redux";
 import { searchRes } from "../search/searchSlice";
 import { useHistory } from "react-router-dom";
+import { modalState } from "../modal/modalSlice";
 
 const SearchDisplayPage = () => {
   const [positiveResults, setPositiveResults] = useState([]);
   const searchResults = useSelector(searchRes);
+  const isOpen = useSelector(modalState);
   const history = useHistory();
 
   //stretch feature idea 1:
   // filter buttons by price
   // make it a select box/check box, on selected filter through searchResults if the price is equal to "$", "$$" etc
 
+  console.log(isOpen);
   useEffect(() => {
-    return !searchResults.length ? history.push("/") : null;
-  });
+    return !searchResults.length ? history.push("/") : undefined;
+  }, []);
   const results = searchResults.map((result) => {
-    if (result.rating <= 3) {
-      return <SearchDisplay result={result} />;
+    if (result.rating <= 2.9) {
+      return <SearchDisplay key={result.id} result={result} />;
     }
   });
 
@@ -29,7 +32,7 @@ const SearchDisplayPage = () => {
         <h2 id={"heading"}>Search Results</h2>
         {results}
       </div>
-      <ModalDispaly />
+      <ModalDisplay />
     </>
   );
 };

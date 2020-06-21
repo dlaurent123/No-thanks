@@ -1,11 +1,14 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import searchReducer from "../features/search/searchSlice";
-import modalReducer from "../features/modal/modalSlice";
+import modal from "../features/modal/modalSlice";
+import logger from "redux-logger";
+
 const reducer = {
   search: searchReducer,
-  modalReducer,
+  modal,
 };
+
 export default configureStore({
   reducer,
-  middleware: [...getDefaultMiddleware()],
+  middleware: [...getDefaultMiddleware(), logger],
 });

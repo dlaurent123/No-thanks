@@ -48,7 +48,6 @@ const Search = () => {
       });
       dispatch(receiveSearch(res.data.businesses));
       history.push("/search");
-      debugger;
     } catch (err) {
       console.log(err);
     }

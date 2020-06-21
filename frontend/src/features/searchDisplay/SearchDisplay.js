@@ -2,7 +2,7 @@ import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import "../css/SearchDisplay.css";
-import { updateModal } from "../modal/modalSlice";
+import { updateModal, modalState } from "../modal/modalSlice";
 // This is the display component. For each result, which would be mapped through the Search Display page, It would be passed to this display component.
 // Add a unique key for react to keep track of the result
 
@@ -30,13 +30,14 @@ const SearchDisplay = ({ result }) => {
   } = storeLocation;
 
   const dispatch = useDispatch();
+  const isOpen = useSelector(modalState);
 
   const handleClick = (e) => {
-    dispatch(updateModal());
+    dispatch(updateModal(!isOpen));
   };
 
   return (
-    <div className={"restaurantCard"} key={id} value={id}>
+    <div onClick={handleClick} className={"restaurantCard"} key={id} value={id}>
       <div className={"basicInfo"}>
         <h2 id={"name"} onClick={handleClick} value={id}>
           {name}
