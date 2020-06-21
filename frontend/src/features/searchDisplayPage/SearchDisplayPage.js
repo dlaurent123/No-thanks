@@ -31,9 +31,9 @@ const SearchDisplayPage = () => {
 
   return (
     <>
-    <Search/>
+    {/* <Search/> */}
       <div className={"resultIndex"}>
-        <div class={"topHeader"}>
+        <div className={"topHeader"}>
         <img src={Logo} alt={"black"} id={"logo"}/>
         <h2 id={"heading"}>Search Results</h2>
         </div>

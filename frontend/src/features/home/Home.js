@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
+import Logo from "../../logos/a483ae61-c535-4189-a843-d1f8032a54df_200x200.png"
 
 import Search from "../search/Search"
 import Footer from "./Footer"
@@ -18,7 +19,7 @@ const Home = () => {
 
   return isLoading ? <div>Loading.....</div> : 
 <div className="title">
-  <h1>No Thanks</h1>
+  <img src={Logo} alt="logo" className="no-thanks-logo"/>
   <div className="main-page">
   
     <div className="main-header">

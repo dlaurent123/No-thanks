@@ -1,5 +1,5 @@
 .search {
-    width: 960px;
+    width: 860px;
     font-size: 0;
     line-height: normal;
     margin-bottom: 10px;
@@ -10,7 +10,7 @@
     display: inline-block;
     width: inherit;
     box-sizing: border-box;
-    font-size: 35px;
+    font-size: 25px;
     outline: none;
 
   }
@@ -20,15 +20,15 @@
     display: inline-block;
     width: inherit;
     box-sizing: border-box;
-    font-size: 35px;
+    font-size: 25px;
     outline: none;
     margin-top: 5px;
   }
 
-  img{
+  /* img{
       margin-left: 100%;
       margin-top: 5px;
-  }
+  } */
   
   .main-list{
       margin-right: 5000px;
@@ -42,7 +42,7 @@
   .container{
       display: flex;
       align-items: baseline;
-      margin-top: 400px;
+      margin-top: 250px;
   }
 
   .btn{
@@ -50,7 +50,7 @@
     display: inline-block;
     width: inherit;
     box-sizing: border-box;
-    font-size: 35px;
+    font-size: 25px;
     outline: none;
     margin-top: 5px;
     background-color: RGB(77, 90, 72)

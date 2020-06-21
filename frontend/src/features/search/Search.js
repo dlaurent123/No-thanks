@@ -48,7 +48,7 @@ const Search = () => {
     try {
       let res = await axios.get(url, {
         headers: {
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer 8qnMAZ-CZ90tKgmGIL0GXzVK-teEHMAmfu0f-NlSKYgA-dSxs5WzkUz5DEu293l2ccgEUx9VMFEB3rMRMGXh0d7uU2cuybWSC91zVpq7-1l7Zq8LXBzoMVe9L8XvXnYx`,
         },
       });
       dispatch(receiveSearch(res.data.businesses));
