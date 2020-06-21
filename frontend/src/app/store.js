@@ -1,13 +1,11 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import searchReducer from "../features/search/searchSlice"
-// import locationReducer from "../features/search/locationSlice"
+import searchReducer from "../features/search/searchSlice";
+import modalReducer from "../features/modal/modalSlice";
 const reducer = {
-  search: searchReducer
-  // location: locationReducer
-}
+  search: searchReducer,
+  modalReducer,
+};
 export default configureStore({
   reducer,
-  middleware: [...getDefaultMiddleware()]
-
+  middleware: [...getDefaultMiddleware()],
 });
-
