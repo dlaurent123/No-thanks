@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import { modalState } from "../modal/modalSlice";
 import Search from '../search/Search'
 import '../css/SearchDisplayPage.css'
-import Logo from '../../logos/a483ae61-c535-4189-a843-d1f8032a54df_200x200.png'
+import Logo from "../../logos/Logo.png"
 
 const SearchDisplayPage = () => {
   const [positiveResults, setPositiveResults] = useState([]);

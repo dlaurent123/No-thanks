@@ -18,17 +18,17 @@ const Link = ()=>{
         <h3 className="connect">Keep Connected</h3>
         </div>
         <h3 className="main-list__item">
-          <a href="https://www.linkedin.com/in/rafid-hossain/" className="main-list__link">
+          <a className="font"href="https://www.linkedin.com/in/rafid-hossain/" className="main-list__link">
             Rafid Hossain
           </a>
         </h3>
         <h3 className="main-list__item">
-          <a href="https://www.linkedin.com/in/marvinthompson36/" className="main-list__link">
+          <a className="font"href="https://www.linkedin.com/in/marvinthompson36/" className="main-list__link">
             Marvin Thompson
           </a>
         </h3>
         <h3 className="main-list__item">
-          <a href="https://www.linkedin.com/in/dlaurent123/" className="main-list__link">
+          <a className="font"href="https://www.linkedin.com/in/dlaurent123/" className="main-list__link">
             Danny Laurent
           </a>
         </h3>
