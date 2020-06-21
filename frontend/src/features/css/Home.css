@@ -1,0 +1,72 @@
+body{
+    background-color: RGB(77, 90, 72);
+   
+}
+
+.main-page{
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  .main-header{
+    height: 850px;
+    background-image: url(https://static0.srcdn.com/wordpress/wp-content/uploads/2020/06/Gordon-Ramsay-Its-Raw.jpg);
+    background-size: cover;
+    background-position: center center;
+    
+  }
+  
+  .main-header-wrapper{
+    position: relative;
+    width: 960px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+  }
+  
+  .main-nav{
+      font-family: 'Roboto', Helvetica, Arial, sans-serif;
+      font-size: 0.9em;
+      line-height: 0;
+      color: white;
+      
+  }
+  
+
+  .main-nav .main-list {
+    margin: 0;
+    padding: 0;
+    margin-right: 200px;
+  }
+
+  .main-nav li {
+    display: inline;
+    padding-right: 5px;
+    font-weight: bold;
+  }
+
+  .main-nav .main-list__link:link {
+    font-size: 1rem;
+    line-height: 0.9rem;
+    color: white;
+    text-decoration: none;
+    padding: 12px 11px 9px 11px;
+    float: right;
+  }
+
+  .main-nav .main-list__link:hover {
+    border-bottom: 2px solid white
+  }
+
+  .nav-wrapper {
+    margin-bottom: 94px;
+  }
+
+  img{
+      margin-top: -200px;
+  }
+
+  

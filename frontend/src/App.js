@@ -8,7 +8,6 @@ import Search from "./features/search/Search";
 function App() {
   return (
     <>
-      <Search />
       <div className="App">
         <Switch>
           <Route exact path="/">

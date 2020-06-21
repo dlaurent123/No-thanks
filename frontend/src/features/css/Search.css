@@ -1,0 +1,57 @@
+.search {
+    width: 960px;
+    font-size: 0;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .field-request{
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    box-sizing: border-box;
+    font-size: 35px;
+    outline: none;
+
+  }
+
+  .field-location {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    box-sizing: border-box;
+    font-size: 35px;
+    outline: none;
+    margin-top: 5px;
+  }
+
+  img{
+      margin-left: 100%;
+      margin-top: 5px;
+  }
+  
+  .main-list{
+      margin-right: 5000px;
+      
+  }
+
+  a{
+      color: white;
+  }
+
+  .container{
+      display: flex;
+      align-items: baseline;
+      margin-top: 400px;
+  }
+
+  .btn{
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    box-sizing: border-box;
+    font-size: 35px;
+    outline: none;
+    margin-top: 5px;
+    background-color: RGB(77, 90, 72)
+  }
