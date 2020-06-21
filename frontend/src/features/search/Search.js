@@ -59,20 +59,16 @@ const Search = () => {
   console.log(latitude, longitude);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="categories"
-        value={term}
-        placeholder="Search By Category"
-        onChange={(e) => setTerm(e.currentTarget.value)}
-      />
-      <input
-        className="location"
-        value={location}
-        placeholder="Search By City/Zipcode"
-        onChange={(e) => setLocation(e.currentTarget.value)}
-      />
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className="search">
+    <div className="container">
+      <div className="left-side">
+        <input className="field-request" placeholder="Search By Cuisine" value={term} onChange={(e)=>setTerm(e.currentTarget.value)}/>
+      </div>
+      <div className="right-side">
+      <input className="field-location" placeholder="Search By City/Zipcode" value={location} onChange={(e)=>setLocation(e.currentTarget.value)}/>
+      </div>
+      <button type="submit" className="btn">Submit</button>
+    </div>
     </form>
   );
 };
