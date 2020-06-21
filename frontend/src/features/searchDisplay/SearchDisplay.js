@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useDispatch, useSelector } from "react-redux";
 import "../css/SearchDisplay.css";
 import { updateModal, modalState } from "../modal/modalSlice";
@@ -37,6 +36,7 @@ const SearchDisplay = ({ result }) => {
   };
 
   return (
+
     <div onClick={handleClick} className={"restaurantCard"} key={id} value={id}>
       <div className={"basicInfo"}>
         <h2 id={"name"} onClick={handleClick} value={id}>
@@ -55,7 +55,9 @@ const SearchDisplay = ({ result }) => {
         <h2 id={"rating"}>Rating: {rating}</h2>
         <h3 id={"price"}>Price: {price}</h3>
       </div>
+      <br/>
     </div>
+    
   );
 };
 

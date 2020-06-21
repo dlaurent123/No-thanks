@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
+
 import Search from "../search/Search"
 import Footer from "./Footer"
 import "../css/Home.css"
+
 
 const Home = () => {
   const isLoading = useSelector(loadingState);
@@ -33,10 +35,6 @@ const Home = () => {
   </div>
   <Footer/>
 </div>;
-  
-
-  
-  
 };
 
 export default Home;
