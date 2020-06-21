@@ -1,6 +1,7 @@
 .restaurantCard {
     display: flex;
     flex-direction: row;
+    margin: auto;
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
