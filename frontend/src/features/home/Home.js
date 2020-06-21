@@ -1,14 +1,17 @@
-import React from "react";
-import Search from "../search/Search";
-const { API_KEY } = process.env;
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
 
 const Home = () => {
-  return (
-    <div>
-      Home
-      <Search />
-    </div>
-  );
+  const isLoading = useSelector(loadingState);
+  const dispatch = useDispatch();
+  const unmount = () => dispatch(setIsLoading(!isLoading));
+
+  useEffect(() => {
+    return unmount;
+  });
+
+  return isLoading ? <div>Loading.....</div> : <div>Home</div>;
 };
 
 export default Home;
