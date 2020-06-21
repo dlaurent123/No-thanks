@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { receiveSearch } from "../search/searchSlice";
+import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Search = () => {
@@ -10,8 +11,10 @@ const Search = () => {
   const [term, setTerm] = useState("");
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
+  const isLoading = useSelector(loadingState);
   const dispatch = useDispatch();
   const history = useHistory();
+
   console.log(location);
 
   const locationURL = () => {
@@ -40,6 +43,7 @@ const Search = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = locationURL();
+    dispatch(setIsLoading(!isLoading));
     try {
       let res = await axios.get(url, {
         headers: {
