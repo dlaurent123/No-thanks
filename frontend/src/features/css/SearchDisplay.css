@@ -6,7 +6,7 @@
     border-width: thin;
     border-color: rgba(41, 51, 92);
     background-color:  rgba(41, 51, 92);
-    width: 600px;
+    width: 700px;
     margin: auto;
     animation: fadeIn ease 5s;
     -webkit-animation: fadeIn ease 5s;
@@ -52,6 +52,11 @@
     border-radius: 20px;
     width: 400px;
     font-family: 'Source Sans Pro', sans-serif;
+    transition: 2s;
+}
+
+.basicInfo:hover {
+    width: 800px;
 }
 
 .information {
@@ -60,6 +65,11 @@
     color: white;
     background-color: rgba(168, 198, 134);
     border-radius: 20px;
+    transition: 2s;
+}
+
+.information:hover {
+    width: 800px;
 }
 
 #info {
@@ -96,9 +106,18 @@
     font-weight: 400;
 }
 
+#category:hover {
+    color: rgba(254, 249, 255);
+    text-shadow: rgba(162, 126, 142);;
+}
+
 #reviews {
     font-size: medium;
     font-weight: 400;
+}
+
+#reviews:hover {
+    color: rgba(254, 249, 255);
 }
 
 #rating {
@@ -106,9 +125,17 @@
     font-weight: 400;
 }
 
+#rating:hover {
+    color: rgba(254, 249, 255);
+}
+
 #price {
     font-size: medium;
     font-weight: 400;
+}
+
+#price:hover {
+    color: rgba(254, 249, 255);
 }
 
 #name {

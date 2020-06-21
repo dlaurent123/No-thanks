@@ -6,6 +6,8 @@ import { searchRes } from "../search/searchSlice";
 import { useHistory } from "react-router-dom";
 import { modalState } from "../modal/modalSlice";
 import Search from '../search/Search'
+import '../css/SearchDisplayPage.css'
+import Logo from '../../logos/a483ae61-c535-4189-a843-d1f8032a54df_200x200.png'
 
 const SearchDisplayPage = () => {
   const [positiveResults, setPositiveResults] = useState([]);
@@ -31,7 +33,10 @@ const SearchDisplayPage = () => {
     <>
     <Search/>
       <div className={"resultIndex"}>
+        <div class={"topHeader"}>
+        <img src={Logo} alt={"black"} id={"logo"}/>
         <h2 id={"heading"}>Search Results</h2>
+        </div>
         {results}
       </div>
       <ModalDisplay />
