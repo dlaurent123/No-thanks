@@ -1,47 +1,116 @@
 .restaurantCard {
+    display: flex;
+    flex-direction: row;
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
-    border-color: lightgray;
-    background-color: lightgray;
+    border-color: rgba(41, 51, 92);
+    background-color:  rgba(41, 51, 92);
+    width: 600px;
+    margin: auto;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+    height: 300px;
 }
 
-/* .basicInfo {
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
 
+.restaurantCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 1;
+}
+
+.basicInfo {
+    background-color: rgba(41, 51, 92);
+    color: white;
+    border-radius: 20px;
+    width: 400px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .information {
-
+    padding-top: 80px;
+    width: 400px;
+    color: white;
+    background-color: rgba(168, 198, 134);
+    border-radius: 20px;
 }
 
 #info {
-
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
 }
 
 #image {
-
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
 }
 
 #address {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: medium;
+}
 
+#address:hover {
+    color: rgba(162, 126, 142);
 }
 
 #phone {
+    font-size: medium;
+    font-weight: 400;
+}
 
+#phone:hover {
+    color: rgba(162, 126, 142);
 }
 
 #category {
-
+    font-size: medium;
+    font-weight: 400;
 }
 
 #reviews {
-
+    font-size: medium;
+    font-weight: 400;
 }
 
 #rating {
-
+    font-size: medium;
+    font-weight: 400;
 }
 
 #price {
+    font-size: medium;
+    font-weight: 400;
+}
 
-} */
+#name {
+    font-family: 'Source Sans Pro', sans-serif;
+}

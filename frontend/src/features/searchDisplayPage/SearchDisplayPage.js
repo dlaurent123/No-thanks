@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { searchRes } from "../search/searchSlice";
 import { useHistory } from "react-router-dom";
 import { modalState } from "../modal/modalSlice";
+import Search from '../search/Search'
 
 const SearchDisplayPage = () => {
   const [positiveResults, setPositiveResults] = useState([]);
@@ -28,6 +29,7 @@ const SearchDisplayPage = () => {
 
   return (
     <>
+    <Search/>
       <div className={"resultIndex"}>
         <h2 id={"heading"}>Search Results</h2>
         {results}

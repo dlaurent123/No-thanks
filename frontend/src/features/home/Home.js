@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
+import Search from '../search/Search'
 
 const Home = () => {
   const isLoading = useSelector(loadingState);
@@ -11,7 +12,19 @@ const Home = () => {
     return unmount;
   });
 
-  return isLoading ? <div>Loading.....</div> : <div>Home</div>;
+  return (
+    isLoading ? (   
+    <div>
+      <Search/>
+      Loading.....
+      </div>
+    ) : (
+    <div>
+      <Search/>
+      Home
+      </div>
+    )
+  )
 };
 
 export default Home;

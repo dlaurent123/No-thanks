@@ -3,12 +3,11 @@ import "./App.css";
 import Home from "./features/home/Home";
 import { Route, Switch } from "react-router-dom";
 import SearchDisplayPage from "./features/searchDisplayPage/SearchDisplayPage";
-import Search from "./features/search/Search";
 
 function App() {
   return (
     <>
-      <Search />
+      
       <div className="App">
         <Switch>
           <Route exact path="/">
