@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { bussinesState } from "../bussines/bussinesSlice";
 import axios from "axios";
 import BussinesHours from "./BussinesHours";
+import Reviews from "../reviews/Reviews";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const apiCall = async (bizId, setBiz, setReviews, setLocation, setHours) => {
@@ -19,7 +20,7 @@ const apiCall = async (bizId, setBiz, setReviews, setLocation, setHours) => {
   setLocation(bizz.data.location.display_address);
   setHours(bizz.data.hours[0].open);
 
-  let reviews = await axios.get(
+  let revs = await axios.get(
     `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${bizId}/reviews`,
     {
       headers: {
@@ -27,7 +28,7 @@ const apiCall = async (bizId, setBiz, setReviews, setLocation, setHours) => {
       },
     }
   );
-  setReviews(reviews);
+  setReviews(revs.data.reviews);
 };
 
 const BussinesDisplay = () => {
@@ -36,11 +37,6 @@ const BussinesDisplay = () => {
   const [location, setLocation] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [hours, setHours] = useState([]);
-
-  // console.log(location.display_address[0]);
-
-  // const { address1 } = addy;
-  // console.log(address1);
 
   useEffect(() => {
     apiCall(bizId, setBiz, setReviews, setLocation, setHours);
@@ -54,8 +50,20 @@ const BussinesDisplay = () => {
         alt=""
         src={biz.image_url}
       />
-      <span>Rating {biz.rating}</span>
-      <span>Price {biz.price}</span>
+      <div style={{ paddingTop: "10px" }}>
+        <div style={{ paddingBottom: "3px" }}>
+          <span style={{ fontWeight: "bold" }}>Rating </span>
+          <span>{biz.rating}</span>
+        </div>
+        <div>
+          <span style={{ fontWeight: "bold" }}>Price</span>
+          <span> {biz.price}</span>
+        </div>
+      </div>
+      <div style={{ paddingTop: "10px" }}>
+        <Reviews reviews={reviews} />
+      </div>
+
       <div>
         <h2>Hours & Location</h2>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
