@@ -1,0 +1,26 @@
+.resultIndex {
+    overflow: scroll;
+    height: 700px;
+    width: 800px;
+    margin: auto;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+    margin-left: 230px;
+    padding-bottom: 10px;
+}
+
+.topHeader {
+    display: flex;
+    margin: auto;
+    height: 90px;
+}
+
+#heading {
+    margin-left: 70px;
+    padding-top: 15px;
+    font-weight: 400;
+}
+

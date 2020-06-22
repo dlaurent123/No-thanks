@@ -4,6 +4,10 @@ import ModalDisplay from "../modal/ModalDisplay";
 import { useSelector } from "react-redux";
 import { searchRes } from "../search/searchSlice";
 import { useHistory } from "react-router-dom";
+import { modalState } from "../modal/modalSlice";
+import Search from '../search/Search'
+import '../css/SearchDisplayPage.css'
+import Logo from "../../logos/Logo.png"
 
 const SearchDisplayPage = () => {
   const searchResults = useSelector(searchRes);
@@ -27,8 +31,12 @@ const SearchDisplayPage = () => {
 
   return (
     <>
+    {/* <Search/> */}
       <div className={"resultIndex"}>
+        <div className={"topHeader"}>
+        <img src={Logo} alt={"black"} id={"logo"}/>
         <h2 id={"heading"}>Search Results</h2>
+        </div>
         {results}
       </div>
       <ModalDisplay />

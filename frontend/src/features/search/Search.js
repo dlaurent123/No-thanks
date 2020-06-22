@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { receiveSearch } from "../search/searchSlice";
 import { loadingState, setIsLoading } from "../isLoading/loadingSlice";
+import "../css/Search.css"
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Search = () => {
@@ -47,7 +48,7 @@ const Search = () => {
     try {
       let res = await axios.get(url, {
         headers: {
-          Authorization: `Bearer ${API_KEY}`,
+          Authorization: `Bearer 8qnMAZ-CZ90tKgmGIL0GXzVK-teEHMAmfu0f-NlSKYgA-dSxs5WzkUz5DEu293l2ccgEUx9VMFEB3rMRMGXh0d7uU2cuybWSC91zVpq7-1l7Zq8LXBzoMVe9L8XvXnYx`,
         },
       });
       dispatch(receiveSearch(res.data.businesses));
@@ -59,20 +60,16 @@ const Search = () => {
   console.log(latitude, longitude);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="categories"
-        value={term}
-        placeholder="Search By Category"
-        onChange={(e) => setTerm(e.currentTarget.value)}
-      />
-      <input
-        className="location"
-        value={location}
-        placeholder="Search By City/Zipcode"
-        onChange={(e) => setLocation(e.currentTarget.value)}
-      />
-      <button type="submit">Submit</button>
+    <form onSubmit={handleSubmit} className="search">
+    <div className="container">
+      <div className="left-side">
+        <input className="field-request" placeholder="Search By Cuisine" value={term} onChange={(e)=>setTerm(e.currentTarget.value)}/>
+      </div>
+      <div className="right-side">
+      <input className="field-location" placeholder="Search By City/Zipcode" value={location} onChange={(e)=>setLocation(e.currentTarget.value)}/>
+      </div>
+      <button type="submit" className="btn">Submit</button>
+    </div>
     </form>
   );
 };
