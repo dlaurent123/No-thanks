@@ -12,7 +12,7 @@ export const styles = {
     borderStyle: "solid",
     borderColor: "#fafafa",
     padding: "10px",
-    boxShadow: " 5px 10px 8px #3da9fc",
+    boxShadow: " 5px 10px 8px #F1A401",
     maxWidth: "80vw",
     maxHeight: "90vh",
     height: "650px",

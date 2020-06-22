@@ -4,10 +4,10 @@ import ModalDisplay from "../modal/ModalDisplay";
 import { useSelector } from "react-redux";
 import { searchRes } from "../search/searchSlice";
 import { useHistory } from "react-router-dom";
-import { modalState } from "../modal/modalSlice";
-import Search from '../search/Search'
-import '../css/SearchDisplayPage.css'
-import Logo from "../../logos/Logo.png"
+// import { modalState } from "../modal/modalSlice";
+// import Search from "../search/Search";
+import "../css/SearchDisplayPage.css";
+import Logo from "../../logos/Logo.png";
 
 const SearchDisplayPage = () => {
   const searchResults = useSelector(searchRes);
@@ -18,7 +18,6 @@ const SearchDisplayPage = () => {
   // filter buttons by price
   // make it a select box/check box, on selected filter through searchResults if the price is equal to "$", "$$" etc
 
-  // console.log(isOpen);
   useEffect(() => {
     return !searchResults.length ? history.push("/") : undefined;
   }, [searchResults.length, history]);
@@ -31,11 +30,11 @@ const SearchDisplayPage = () => {
 
   return (
     <>
-    {/* <Search/> */}
+      {/* <Search/> */}
       <div className={"resultIndex"}>
         <div className={"topHeader"}>
-        <img src={Logo} alt={"black"} id={"logo"}/>
-        <h2 id={"heading"}>Search Results</h2>
+          <img src={Logo} alt={"black"} id={"logo"} />
+          <h2 id={"heading"}>Search Results</h2>
         </div>
         {results}
       </div>
