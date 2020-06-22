@@ -57,7 +57,7 @@ const BussinesDisplay = () => {
       <span>Rating {biz.rating}</span>
       <span>Price {biz.price}</span>
       <div>
-        <h2>Location & Hours</h2>
+        <h2>Hours & Location</h2>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div>
             <BussinesHours hours={hours} />
